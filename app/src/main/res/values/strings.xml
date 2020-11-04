@@ -1,0 +1,13 @@
+<resources>
+    <!-- Login Page Text -->
+    <string name="app_name">Farmer App</string>
+    <string name="loginPageText1">Login in</string>
+    <string name="loginPageText2">to your account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="signUp">Sign Up</string>
+    <string name="new_to_farmer_portal_sign_up_free">New to Farmer Portal? Sign Up Free</string>
+
+    <!-- Login Page Text -->
+</resources>
