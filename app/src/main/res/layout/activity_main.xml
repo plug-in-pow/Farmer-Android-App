@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="25dp" >
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/appTitle"

@@ -2,17 +2,29 @@
     <!-- Base application theme. -->
     <style name="Theme.FarmerApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#4CAF50</item>
-        <item name="colorPrimaryVariant">#8BC34A</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">#388E3C</item>
+        <item name="colorPrimaryVariant">#1B5E20</item>
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/purple_700</item>
-        <item name="colorSecondaryVariant">@color/purple_500</item>
-        <item name="colorOnSecondary">@color/black</item>
+<!--        <item name="colorSecondary">@color/purple_700</item>-->
+<!--        <item name="colorSecondaryVariant">@color/purple_500</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
         <!-- Customize your theme here. -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
+        <!-- Typography -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorOnBackground">@color/black</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnError">@color/black</item>
+
+        <!-- Text style -->
+        <item name="fontFamily">@font/nunito_bold</item>
+        
+        <!-- Other important component -->
+
     </style>
 </resources>
