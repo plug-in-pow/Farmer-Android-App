@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="APP">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/classifier"
+                    android:icon="@drawable/ic_baseline_eco_24"
+                    android:title="Classifier" />
+                <item
+                    android:id="@+id/graph"
+                    android:icon="@drawable/ic_baseline_bar_chart_24"
+                    android:title="Crop Price" />
+                <item
+                    android:id="@+id/help"
+                    android:icon="@drawable/ic_baseline_help_24"
+                    android:title="Complaint" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="ACCOUNT">
+        <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/ic_baseline_person_24"
+                android:title="Profile" />
+            <item
+                android:id="@+id/sign_out"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+
+</menu>

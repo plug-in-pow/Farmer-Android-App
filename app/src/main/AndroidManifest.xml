@@ -11,7 +11,7 @@
         android:theme="@style/Theme.FarmerApp">
         <activity
             android:name=".HomePage"
-            android:theme="@style/Theme.FarmerApp">
+            android:theme="@style/Theme.FarmerApp.NoActionBar">
         </activity>
         <activity
             android:name=".MainActivity"

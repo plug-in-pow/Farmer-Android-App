@@ -1,9 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.FarmerApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">#388E3C</item>
         <item name="colorPrimaryVariant">#1B5E20</item>
+        <item name="colorControlNormal">@color/white</item>
 
         <!-- Secondary brand color. -->
 <!--        <item name="colorSecondary">@color/purple_700</item>-->
@@ -25,6 +27,9 @@
         <item name="fontFamily">@font/nunito_bold</item>
         
         <!-- Other important component -->
-
+    </style>
+    <style name="Theme.FarmerApp.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
     </style>
 </resources>
