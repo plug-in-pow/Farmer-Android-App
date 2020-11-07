@@ -25,7 +25,7 @@
 
         <!-- Text style -->
         <item name="fontFamily">@font/nunito_bold</item>
-        
+
         <!-- Other important component -->
     </style>
     <style name="Theme.FarmerApp.NoActionBar">

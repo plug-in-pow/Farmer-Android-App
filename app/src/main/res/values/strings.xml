@@ -13,8 +13,13 @@
     <string name="openNavDrawer">Navigation Drawer open</string>
     <string name="closeNavDrawer">Navigation Drawer close</string>
     <string name="welcome">Welcome</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Sign Up Page -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_icon">back navigation icon</string>
+    <string name="phone">Phone</string>
+    <string name="full_name">Full Name</string>
+    <string name="loading">Loading</string>
 
     <!-- Login Page Text -->
 
