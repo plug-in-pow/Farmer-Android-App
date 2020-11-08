@@ -12,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -109,11 +111,29 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         } else if (id == R.id.help) {
             setupFragment(new ComplaintFragment());
         } else if (id == R.id.profile) {
-            setupFragment(new ClassifierFragment());
+            // Something
         } else if (id == R.id.sign_out) {
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
+
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(HomePage.this);
+            builder.setTitle("Sign Out ?");
+            builder.setMessage("Are you sure you want to sign out");
+            builder.setBackground(getResources().getDrawable(R.drawable.alert_dialog_bg,null));
+            builder.setPositiveButton("ACCEPT", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    finish();
+                }
+            });
+
+            builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.show();
         }
 
 

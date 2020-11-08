@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(MainActivity.this, "Logged In.", Toast.LENGTH_SHORT).show();
                             openActivity(HomePage.class,true);
-                            // startActivity(new Intent(getApplicationContext(), HomePage.class));
                         } else {
                             Toast.makeText(MainActivity.this, "Error !!", Toast.LENGTH_SHORT).show();
                         }

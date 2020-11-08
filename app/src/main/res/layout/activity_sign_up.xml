@@ -28,14 +28,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/nunito_regular"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitleSignUp"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitleSignUp" />
 
     <EditText
         android:id="@+id/editTextEmailSignUp"
@@ -44,14 +44,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/nunito_regular"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPersonNameSignUp"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPersonNameSignUp" />
 
     <EditText
         android:id="@+id/editTextPasswordSignUp"
@@ -60,14 +60,15 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:ems="10"
+
         android:fontFamily="@font/nunito_regular"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSignUp"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSignUp" />
 
     <EditText
         android:id="@+id/editTextPhoneSignUp"
@@ -76,14 +77,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/nunito_regular"
         android:hint="@string/phone"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignUp"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignUp" />
 
     <Button
         android:id="@+id/signUpButtonSignUp"
