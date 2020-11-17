@@ -8,9 +8,9 @@
         <item name="colorControlNormal">@color/white</item>
 
         <!-- Secondary brand color. -->
-<!--        <item name="colorSecondary">@color/purple_700</item>-->
-<!--        <item name="colorSecondaryVariant">@color/purple_500</item>-->
-<!--        <item name="colorOnSecondary">@color/black</item>-->
+        <!--        <item name="colorSecondary">@color/purple_700</item>-->
+        <!--        <item name="colorSecondaryVariant">@color/purple_500</item>-->
+        <!--        <item name="colorOnSecondary">@color/black</item>-->
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -28,8 +28,13 @@
 
         <!-- Other important component -->
     </style>
+
     <style name="Theme.FarmerApp.NoActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
+
+    <style name="Theme.FarmerApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FarmerApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -12,11 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmerApp">
         <activity
+            android:name=".CropPriceInfo"
+            android:label="@string/title_activity_crop_price_info"
+            android:theme="@style/Theme.FarmerApp.NoActionBar"></activity>
+        <activity
             android:name=".SignUpActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".HomePage"
-            android:theme="@style/Theme.FarmerApp.NoActionBar"></activity>
+            android:theme="@style/Theme.FarmerApp.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

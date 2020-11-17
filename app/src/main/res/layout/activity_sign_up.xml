@@ -109,6 +109,7 @@
         android:layout_marginStart="32dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/navigation_icon"
+        android:tint="#4CAF50"
         app:layout_constraintBottom_toBottomOf="@+id/appTitleSignUp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appTitleSignUp"

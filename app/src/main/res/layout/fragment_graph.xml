@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/graphTitle"
             android:layout_width="match_parent"
@@ -26,62 +25,102 @@
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:id="@+id/textInputLayout_states"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="24dp"
             android:hint="State"
             app:boxBackgroundMode="outline"
-            app:endIconMode="dropdown_menu">
+            app:endIconMode="dropdown_menu"
+            app:helperText="Select state">
+
+            <ProgressBar
+                android:id="@+id/determinateBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminateOnly="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
 
             <AutoCompleteTextView
                 android:id="@+id/dropdownText_state"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:focusable="false" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:id="@+id/textInputLayout_district"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="24dp"
             android:hint="District"
             app:boxBackgroundMode="outline"
-            app:endIconMode="dropdown_menu">
+            app:endIconMode="dropdown_menu"
+            app:helperText="Select District">
+
+            <ProgressBar
+                android:id="@+id/determinateBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminateOnly="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
 
             <AutoCompleteTextView
                 android:id="@+id/dropdownText_district"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:focusable="false" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:id="@+id/textInputLayout_market"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="24dp"
             android:hint="Market"
             app:boxBackgroundMode="outline"
-            app:endIconMode="dropdown_menu">
+            app:endIconMode="dropdown_menu"
+            app:helperText="Select Market">
+
+            <ProgressBar
+                android:id="@+id/determinateBar3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminateOnly="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
 
             <AutoCompleteTextView
                 android:id="@+id/dropdownText_market"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:focusable="false" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/submitGraph"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/submit"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:text="@string/submit" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:layout_marginHorizontal="32dp"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
 
     </LinearLayout>
 </ScrollView>
