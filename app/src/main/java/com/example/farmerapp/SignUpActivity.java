@@ -91,7 +91,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 loadingDialog.startLoadingAnimation();
 
-               // register the user
+                // register the user
                 fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -110,7 +110,7 @@ public class SignUpActivity extends AppCompatActivity {
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                   Log.d(TAG,"User created successfully" + userId);
+                                    Log.d(TAG,"User created successfully" + userId);
                                 }
                             });
 

@@ -42,20 +42,6 @@ public class    Classifier {
         this.LABEL_LIST = loadLabelList(assetManager, labelPath);
     }
 
-//    public static final class Recognition {
-//        private String id;
-//        private String title;
-//        private float confidence;
-//        public Recognition(String id, String title, float confidence) {
-//            this.id = id;
-//            this.title = title;
-//            this.confidence = confidence;
-//        }
-//        public String toString() {
-//            return "Title = " + this.title + ", Confidence = " + this.confidence + ')';
-//        }
-//    }
-
     private MappedByteBuffer loadModelFile(AssetManager assetManager, String modelPath) throws IOException {
         AssetFileDescriptor fileDescriptor = assetManager.openFd(modelPath);
         FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
@@ -67,7 +53,6 @@ public class    Classifier {
 
     private List<String> loadLabelList(AssetManager assetManager,String labelPath) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(assetManager.open(labelPath)));
-//        BufferedReader bf =  new BufferedReader(new FileReader(labelPath));
         String str;
 
         List<String> list = new ArrayList<>();
@@ -87,7 +72,7 @@ public class    Classifier {
         for (int i=0;i<LABEL_LIST.size();i++) {
             float confidence = result[0][i];
             if (confidence >= THRESHOLD) {
-                confidence_value = Float.toString(confidence);
+                confidence_value = Float.toString(confidence*100) + "%";
                 title = LABEL_LIST.get(i);
             }
         }
@@ -112,32 +97,4 @@ public class    Classifier {
         }
         return byteBuffer;
     }
-
-//    private List<Classifier.Recognition> getSortedResult(float[] labelProbArray) {
-//        //Log.d("Classifier", "List Size:(%d, %d, %d)".format(labelProbArray.size,labelProbArray[0].size,LABEL_LIST.size))
-//        PriorityQueue pq = new PriorityQueue(this.MAX_RESULTS);
-////        val pq = PriorityQueue(
-////                MAX_RESULTS,
-////                Comparator<Classifier.Recognition> {
-////                        (_, _, confidence1), (_, _, confidence2)
-////                -> java.lang.Float.compare(confidence1, confidence2) * -1
-////            })
-//
-////        for (i in LABEL_LIST.indices) {
-////            val confidence = labelProbArray[0][i]
-////            if (confidence >= THRESHOLD) {
-////                pq.add(Classifier.Recognition("" + i,
-////                if (LABEL_LIST.size > i) LABEL_LIST[i] else "Unknown", confidence)
-////                )
-////            }
-////        }
-////        Log.d("Classifier", "pqsize:(%d)".format(pq.size))
-//
-//        ArrayList recognitions = new ArrayList<Classifier.Recognition>();
-////        int recognitionsSize = Math.min(pq.size(), MAX_RESULTS);
-////        for (int i=0; i < recognitionsSize;i++) {
-////            recognitions.add(pq.poll());
-////        }
-//        return recognitions;
-//    }
 }

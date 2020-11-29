@@ -25,10 +25,6 @@
     <item android:title="ACCOUNT">
         <menu>
             <item
-                android:id="@+id/profile"
-                android:icon="@drawable/ic_baseline_person_24"
-                android:title="Profile" />
-            <item
                 android:id="@+id/sign_out"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
                 android:title="Sign Out" />

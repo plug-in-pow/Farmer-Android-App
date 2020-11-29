@@ -38,7 +38,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Button signOut;
-    private TextView fullName;
+    private TextView fullName,email;
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
     private String userId;
@@ -74,12 +74,14 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
         View headerView = navigationView.getHeaderView(0);
         fullName = (TextView) headerView.findViewById(R.id.fullName);
+        email = (TextView) headerView.findViewById(R.id.emailText);
 
         DocumentReference documentReference = fStore.collection("user").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 fullName.setText(value.getString("fullName").trim().toUpperCase());
+                email.setText(value.getString("email").trim());
             }
         });
     }
@@ -110,8 +112,6 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
             setupFragment(new GraphFragment());
         } else if (id == R.id.help) {
             setupFragment(new ComplaintFragment());
-        } else if (id == R.id.profile) {
-            // Something
         } else if (id == R.id.sign_out) {
 
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(HomePage.this);
